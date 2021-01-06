@@ -2,9 +2,9 @@ import React from "react";
 import { TouchableOpacity, StyleSheet } from "react-native";
 
 import colors from "../config/colors";
-import AppText from "../components/AppText";
+import AppText from "./AppText";
 
-export default function Button({ children, color }) {
+export default function AppButton({ children, color }) {
   return (
     <TouchableOpacity style={styles(color).container}>
       <AppText style={{ color: "white" }}>{children}</AppText>
