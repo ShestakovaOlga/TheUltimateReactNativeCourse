@@ -11,15 +11,19 @@ export default function ListItem({
   image,
   onPress,
   renderRightActions,
+  IconComponent,
 }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
         <View style={styles.row}>
-          <Image resizeMode="contain" style={styles.avatar} source={image} />
-          <View>
+          {IconComponent}
+          {image && (
+            <Image resizeMode="contain" style={styles.avatar} source={image} />
+          )}
+          <View style={styles.textContainer}>
             <AppText style={styles.title}>{title}</AppText>
-            <AppText style={styles.subTitle}>{subTitle}</AppText>
+            {subTitle && <AppText style={styles.subTitle}>{subTitle}</AppText>}
           </View>
         </View>
       </TouchableHighlight>
@@ -32,12 +36,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     padding: 15,
+    backgroundColor: colors.white,
+  },
+  textContainer: {
+    marginLeft: 15,
   },
   avatar: {
     width: 70,
     height: 70,
     borderRadius: 35,
-    marginRight: 15,
   },
   title: {
     fontWeight: "500",
