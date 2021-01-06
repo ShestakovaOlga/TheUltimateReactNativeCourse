@@ -21,10 +21,10 @@ function ViewImageScreen(props) {
           marginHorizontal: 15,
         }}
       >
-        <MaterialCommunityIcons name="close" size={35} color="white" />
+        <MaterialCommunityIcons name="close" size={30} color="white" />
         <MaterialCommunityIcons
           name="trash-can-outline"
-          size={35}
+          size={30}
           color="white"
         />
       </View>

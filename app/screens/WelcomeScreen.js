@@ -1,7 +1,7 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
-import Button from "../components/Button";
+import AppButton from "../components/AppButton";
 import AppText from "../components/AppText";
 import Card from "../components/Card";
 
@@ -23,8 +23,8 @@ function WelcomeScreen(props) {
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
         <AppText style={styles.title}>Sell What You Don't Need</AppText>
       </View>
-      <Button>Login</Button>
-      <Button color="secondary">Register</Button>
+      <AppButton>Login</AppButton>
+      <AppButton color="secondary">Register</AppButton>
     </ImageBackground>
   );
 }
