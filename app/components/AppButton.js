@@ -4,10 +4,10 @@ import { TouchableOpacity, StyleSheet } from "react-native";
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-export default function AppButton({ children, color }) {
+export default function AppButton({ title, color, onPress }) {
   return (
-    <TouchableOpacity style={styles(color).container}>
-      <AppText style={{ color: "white" }}>{children}</AppText>
+    <TouchableOpacity style={styles(color).container} onPress={onPress}>
+      <AppText style={{ color: "white" }}>{title}</AppText>
     </TouchableOpacity>
   );
 }
