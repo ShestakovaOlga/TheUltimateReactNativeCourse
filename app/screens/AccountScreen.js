@@ -2,10 +2,10 @@ import React from "react";
 import { StyleSheet, FlatList, View, Image, Text } from "react-native";
 
 import IconApp from "../components/IconApp";
-import ListItem from "../components/ListItem";
+import ListItem from "../components/lists/ListItem";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
-import ListItemSeparator from "../components/ListItemSeparator";
+import ListItemSeparator from "../components/lists/ListItemSeparator";
 
 const menuItems = [
   {
