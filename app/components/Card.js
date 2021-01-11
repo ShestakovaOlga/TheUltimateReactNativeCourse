@@ -9,8 +9,10 @@ export default function Card({ title, subtitle, source }) {
     <TouchableOpacity style={styles.container}>
       <Image style={styles.img} source={source} />
       <View style={styles.textView}>
-        <AppText>{title}</AppText>
-        <AppText style={{ color: colors.secondary }}>{subtitle}</AppText>
+        <AppText numberOfLines={1}>{title}</AppText>
+        <AppText numberOfLines={2} style={{ color: colors.secondary }}>
+          {subtitle}
+        </AppText>
       </View>
     </TouchableOpacity>
   );

@@ -39,6 +39,7 @@ export default function MessagesScreen() {
         renderItem={({ item }) => {
           return (
             <ListItem
+              showChevrons={true}
               title={item.title}
               subTitle={item.description}
               image={item.image}
