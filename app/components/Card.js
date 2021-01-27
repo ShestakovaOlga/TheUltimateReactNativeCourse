@@ -4,9 +4,9 @@ import { TouchableOpacity, StyleSheet, Image, View } from "react-native";
 import colors from "../config/colors";
 import AppText from "../components/AppText";
 
-export default function Card({ title, subtitle, source }) {
+export default function Card({ title, subtitle, source, onPress }) {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
       <Image style={styles.img} source={source} />
       <View style={styles.textView}>
         <AppText numberOfLines={1}>{title}</AppText>
